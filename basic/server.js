@@ -51,3 +51,23 @@ app.put('/contact/1', (req, res) => {
   </button>
 </div>`)
 });
+
+app.get('/modal', (req, res) => {
+  res.send(`
+  <div class="modal-dialog modal-fullscreen">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci aliquam cupiditate veritatis! Est itaque laudantium, nesciunt esse voluptas, sint vero quia unde natus minus fuga provident veniam mollitia consequatur.</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
+</div>
+  `);
+});
